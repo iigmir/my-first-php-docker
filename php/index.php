@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1><?php echo("Hello World"); ?></h1>
-    <a href="/api/index.php">API</a>
+    <a href="/api">API</a>
 </body>
 </html>

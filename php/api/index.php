@@ -2,4 +2,8 @@
 
 header("Content-Type: application/json ; charset=utf-8");
 
-echo('{"message":"Hello World!"}');
+$data = array(
+    "message" => "Hello World!"
+);
+
+echo( json_encode($data) );
