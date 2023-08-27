@@ -1,0 +1,22 @@
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "80:80"
+        volumes:
+            - ./php:/php
+            # Uncomment for trobuleshooting
+            # - ./log/nginx:/var/log/nginx
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        networks:
+            - printemps
+    php:
+        image: php:fpm
+        volumes:
+            - ./php:/php
+        networks:
+            - printemps
+
+networks:
+    printemps:
+        driver: bridge
